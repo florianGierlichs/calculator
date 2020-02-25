@@ -1,0 +1,16 @@
+.calculator {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calculator__output {
+  flex-basis: 100%;
+  font-size: 3rem;
+}
+
+.calculator__input {
+  flex-basis: calc(100% / 3);
+  font-size: 3rem;
+}
