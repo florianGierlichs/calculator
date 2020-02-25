@@ -8,9 +8,17 @@
 .calculator__output {
   flex-basis: 100%;
   font-size: 3rem;
+  background-color: darkgreen;
+  color: whitesmoke;
+  text-align: end;
 }
 
 .calculator__input {
-  flex-basis: calc(100% / 3);
+  flex-basis: calc(100% / 4);
   font-size: 3rem;
+  background-color: aquamarine;
+}
+
+.calculator__input__spec {
+  background-color: chartreuse;
 }
