@@ -3,6 +3,8 @@
   height: 600px;
   display: flex;
   flex-wrap: wrap;
+  border: slategray solid 1px;
+  background-color: teal;
 }
 
 .calculator__output {
@@ -11,12 +13,15 @@
   background-color: darkgreen;
   color: whitesmoke;
   text-align: end;
+  border-radius: 10px;
 }
 
 .calculator__input {
-  flex-basis: calc(100% / 4);
+  flex-basis: calc(100% / 5);
   font-size: 3rem;
   background-color: aquamarine;
+  border-radius: 10px;
+  margin: 12px;
 }
 
 .calculator__input__spec {
