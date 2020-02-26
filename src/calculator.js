@@ -3,6 +3,7 @@
 const calculatorOutput = document.querySelector(".calculator__output");
 const calculatorInput = document.querySelectorAll(".calculator__input");
 const calculatorResult = document.querySelector(".calculator__input__result");
+const calculatorClear = document.querySelector(".clear");
 
 ///////
 const add = (numberOne, numberTwo) => {
@@ -28,3 +29,10 @@ function handleClick() {
 }
 
 calculatorResult.addEventListener("click", handleClick);
+
+function erase() {
+  calculatorOutput.value = "";
+  console.log("C clicked");
+}
+
+calculatorClear.addEventListener("click", erase);
