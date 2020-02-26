@@ -1,8 +1,30 @@
-const calculatorOutput = document.querySelector(".calculator__output");
-const calculatorInputs = document.querySelectorAll(".calculator__input");
+"use strict";
 
-calculatorInputs.forEach(function(calculatorInput) {
-  calculatorInput.addEventListener("click", function() {
-    calculatorOutput.value = calculatorInput.innerHTML;
-  });
-});
+const calculatorOutput = document.querySelector(".calculator__output");
+const calculatorInput = document.querySelectorAll(".calculator__input");
+const calculatorResult = document.querySelector(".calculator__input__result");
+
+///////
+const add = (numberOne, numberTwo) => {
+  return numberOne + numberTwo;
+};
+const subtract = (numberOne, numberTwo) => {
+  return numberOne - numberTwo;
+};
+const divide = (numberOne, numberTwo) => {
+  return numberOne / numberTwo;
+};
+const multiply = (numberOne, numberTwo) => {
+  return numberOne * numberTwo;
+};
+///////
+
+const numberOne = Number(calculatorInput[6].innerText);
+const numberTwo = Number(calculatorInput[2].innerText);
+
+function handleClick() {
+  calculatorOutput.value = add(numberOne, numberTwo);
+  console.log("clicked");
+}
+
+calculatorResult.addEventListener("click", handleClick);
