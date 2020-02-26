@@ -25,6 +25,8 @@
 
 .calculator__input__spec {
   background-color: chartreuse;
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
 }
 
 .calculator__input__result {
