@@ -42,6 +42,6 @@ calculatorClear.addEventListener("click", erase);
 calculatorInputs.forEach(callInput => {
   callInput.addEventListener(
     "click",
-    () => (calculatorOutput.value = callInput.innerText)
+    () => (calculatorOutput.value += callInput.innerText)
   );
 });

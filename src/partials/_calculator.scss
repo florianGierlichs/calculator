@@ -29,4 +29,12 @@
 
 .calculator__input__result {
   background-color: tomato;
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
+}
+
+.clear {
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
+  background-color: tomato;
 }
