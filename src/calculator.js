@@ -47,6 +47,7 @@ const operatorEventListener = operatorClicked => {
     //   calculatorOutput.value = "first value saved";
     // };
     // setOutputToOperator();
+
     alert("First input saved!");
     erase();
   };
