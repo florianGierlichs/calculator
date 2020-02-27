@@ -1,12 +1,11 @@
 body {
-  height: 100vh;
   background: linear-gradient(to bottom right, rgb(58, 6, 58), rgb(12, 0, 12));
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   text-align: center;
   color: deeppink;
   text-shadow: 0 0 30px deeppink;
@@ -18,16 +17,17 @@ h1 {
 }
 
 .calculator__wrapper {
-  width: 500px;
+  width: 400px;
   margin: auto;
+  margin-bottom: 100px;
   border: deeppink solid 5px;
   box-shadow: 0 0 70px deeppink;
   border-radius: 20px;
-  padding: 15px;
+  padding: 12px;
 }
 
 .calculator {
-  height: 600px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   border: deeppink solid 5px;
@@ -37,51 +37,76 @@ h1 {
 }
 
 .clear {
-  margin: 10px;
+  margin: 7px;
   flex-basis: 20%;
   font-size: 3rem;
-  background-color: tomato;
+  background-color: #ffe62e;
+  box-shadow: 0 0 20px deeppink;
   border-radius: 20px;
 }
 
 .output__wrapper {
   display: flex;
-  align-items: center;
+  flex-basis: 60%;
+  margin: 10px;
 }
 
 .calculator__output {
-  height: 100px;
-  font-size: 7rem;
-  color: red;
+  font-size: 1.48rem;
+  background-color: rgb(58, 6, 58);
+  color: #ffe62e;
+  box-shadow: 0 0 20px deeppink;
+  text-shadow: 0 0 10px deeppink;
+  border: deeppink solid 1px;
   border-radius: 20px;
-  padding: 0px;
+  padding-right: 10px;
   text-align: end;
 }
 
 .calculator__inputs {
   flex-basis: 20%;
-  margin: 10px;
+  margin: 7px;
   font-size: 3rem;
-  background-color: aquamarine;
+  background-color: deeppink;
+  box-shadow: 0 0 20px deeppink;
   border-radius: 20px;
 }
 
 .calculator__inputs:hover {
   background-color: fuchsia;
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+.calculator__input__spec:hover {
+  background-color: fuchsia;
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+.clear:hover {
+  background-color: fuchsia;
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+.calculator__input__result:hover {
+  background-color: fuchsia;
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
 }
 
 .calculator__input__spec {
-  margin: 10px;
-  background-color: chartreuse;
+  margin: 7px;
+  background-color: #ffe62e;
+  box-shadow: 0 0 20px deeppink;
   flex-basis: 20%;
   font-size: 3rem;
   border-radius: 20px;
 }
 
 .calculator__input__result {
-  background-color: tomato;
+  background-color: #ffe62e;
+  box-shadow: 0 0 20px deeppink;
   flex-basis: 20%;
   font-size: 3rem;
   border-radius: 20px;
-  margin: 10px;
+  margin: 7px;
 }
