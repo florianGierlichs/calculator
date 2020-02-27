@@ -1,4 +1,4 @@
-import { addition } from "./math.js";
+import { calculate } from "./math.js";
 
 // const declarations
 const calculatorOutput = document.querySelector(".calculator__output");
@@ -11,6 +11,7 @@ const calculatorOperators = document.querySelectorAll(
 
 let numberOne = 0;
 let numberTwo = 0;
+let operator = "";
 
 // functions
 function erase() {
@@ -29,18 +30,7 @@ calculatorInputs.forEach(callInput => {
 const operatorEventListener = operatorClicked => {
   const saveFirstInputValue = () => {
     numberOne = Number(calculatorOutput.value);
-    // const setOutputToOperator = () => {
-    //   calculatorOutput.value = "first value saved";
-    // };
-    // setOutputToOperator();
-    // alert("First input saved!");
-    // erase();
-    calculatorOperators.forEach(callInput => {
-      callInput.addEventListener(
-        "click",
-        () => (calculatorOutput.value = callInput.innerText)
-      );
-    });
+    operator = operatorClicked.innerText;
     erase();
   };
   operatorClicked.addEventListener("click", saveFirstInputValue);
@@ -48,15 +38,14 @@ const operatorEventListener = operatorClicked => {
 
 calculatorOperators.forEach(operatorEventListener);
 //
+// function handleResultClick() {
+//   numberTwo = Number(calculatorOutput.value);
+//   calculatorOutput.value = addition(numberOne, numberTwo);
+// }
+// calculatorResult.addEventListener("click", handleResultClick);
+
 function handleResultClick() {
   numberTwo = Number(calculatorOutput.value);
-  calculatorOutput.value = addition(numberOne, numberTwo);
+  calculatorOutput.value = calculate(numberOne, numberTwo, operator);
 }
 calculatorResult.addEventListener("click", handleResultClick);
-
-// calculatorOperators.forEach(callInput => {
-//   callInput.addEventListener(
-//     "click",
-//     () => (calculatorOutput.value = callInput.innerText)
-//   );
-// });
