@@ -5,10 +5,26 @@ body {
 h1 {
   font-size: 3rem;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
   color: deeppink;
   text-shadow: 0 0 30px deeppink;
+}
+
+.magicWrapper {
+  text-align: center;
+}
+
+.magicBtn {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: deeppink;
+  text-shadow: 0 0 30px deeppink;
+  background-color: rgb(58, 6, 58);
+  border: deeppink solid 5px;
+  box-shadow: 0 0 70px deeppink;
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
 .calculation {
@@ -24,6 +40,13 @@ h1 {
   box-shadow: 0 0 70px deeppink;
   border-radius: 20px;
   padding: 12px;
+  top: -900px;
+  position: relative;
+  transition: all 1.7s ease-out;
+}
+
+.calculator__wrapper.active {
+  top: 0px;
 }
 
 .calculator {

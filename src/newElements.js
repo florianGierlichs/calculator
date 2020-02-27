@@ -3,7 +3,7 @@ export const addElement = numberOperator => {
   const newContent = document.createTextNode(numberOperator);
   newParagraph.appendChild(newContent);
 
-  const calculatorDiv = document.querySelector(".calculator");
+  const calculatorDiv = document.querySelector(".behind__calculation");
   document.body.insertBefore(newParagraph, calculatorDiv);
   newParagraph.className = "calculation";
 };
