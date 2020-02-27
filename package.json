@@ -19,6 +19,7 @@
   "homepage": "https://github.com/florianGierlichs/calculator#readme",
   "devDependencies": {
     "csslint": "^1.0.5",
+    "eslint": "^6.8.0",
     "htmlhint": "^0.11.0",
     "prettier": "^1.19.1",
     "sass": "^1.26.0"
