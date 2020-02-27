@@ -1,4 +1,4 @@
-"use strict";
+import { addition, subtract, divide, multiply } from "./math.js";
 
 // const declarations
 const calculatorOutput = document.querySelector(".calculator__output");
@@ -11,20 +11,6 @@ const calculatorOperators = document.querySelectorAll(
 
 let numberOne = 0;
 let numberTwo = 0;
-
-// calculations
-const addition = (numberOne, numberTwo) => {
-  return numberOne + numberTwo;
-};
-const subtract = (numberOne, numberTwo) => {
-  return numberOne - numberTwo;
-};
-const divide = (numberOne, numberTwo) => {
-  return numberOne / numberTwo;
-};
-const multiply = (numberOne, numberTwo) => {
-  return numberOne * numberTwo;
-};
 
 // functions
 function erase() {
@@ -47,7 +33,14 @@ const operatorEventListener = operatorClicked => {
     //   calculatorOutput.value = "first value saved";
     // };
     // setOutputToOperator();
-    alert("First input saved!");
+    // alert("First input saved!");
+    // erase();
+    calculatorOperators.forEach(callInput => {
+      callInput.addEventListener(
+        "click",
+        () => (calculatorOutput.value = callInput.innerText)
+      );
+    });
     erase();
   };
   operatorClicked.addEventListener("click", saveFirstInputValue);
@@ -60,3 +53,10 @@ function handleResultClick() {
   calculatorOutput.value = addition(numberOne, numberTwo);
 }
 calculatorResult.addEventListener("click", handleResultClick);
+
+// calculatorOperators.forEach(callInput => {
+//   callInput.addEventListener(
+//     "click",
+//     () => (calculatorOutput.value = callInput.innerText)
+//   );
+// });
