@@ -1,11 +1,19 @@
 "use strict";
 
+// const declarations
 const calculatorOutput = document.querySelector(".calculator__output");
-const calculatorInput = document.querySelectorAll(".calculator__input");
+const calculatorInputs = document.querySelectorAll(".calculator__inputs");
 const calculatorResult = document.querySelector(".calculator__input__result");
+const calculatorClear = document.querySelector(".clear");
+const calculatorOperators = document.querySelectorAll(
+  ".calculator__input__spec"
+);
 
-///////
-const add = (numberOne, numberTwo) => {
+let numberOne = 0;
+let numberTwo = 0;
+
+// calculations
+const addition = (numberOne, numberTwo) => {
   return numberOne + numberTwo;
 };
 const subtract = (numberOne, numberTwo) => {
@@ -17,14 +25,37 @@ const divide = (numberOne, numberTwo) => {
 const multiply = (numberOne, numberTwo) => {
   return numberOne * numberTwo;
 };
-///////
 
-const numberOne = Number(calculatorInput[6].innerText);
-const numberTwo = Number(calculatorInput[2].innerText);
-
-function handleClick() {
-  calculatorOutput.value = add(numberOne, numberTwo);
-  console.log("clicked");
+// functions
+function erase() {
+  calculatorOutput.value = "";
 }
+calculatorClear.addEventListener("click", erase);
+//
+calculatorInputs.forEach(callInput => {
+  callInput.addEventListener(
+    "click",
+    () => (calculatorOutput.value += callInput.innerText)
+  );
+});
+//
 
-calculatorResult.addEventListener("click", handleClick);
+const operatorEventListener = operatorClicked => {
+  const saveFirstInputValue = () => {
+    numberOne = Number(calculatorOutput.value);
+    // const setOutputToOperator = () => {
+    //   calculatorOutput.value = "first value saved";
+    // };
+    // setOutputToOperator();
+    erase();
+  };
+  operatorClicked.addEventListener("click", saveFirstInputValue);
+};
+
+calculatorOperators.forEach(operatorEventListener);
+//
+function handleResultClick() {
+  numberTwo = Number(calculatorOutput.value);
+  calculatorOutput.value = addition(numberOne, numberTwo);
+}
+calculatorResult.addEventListener("click", handleResultClick);

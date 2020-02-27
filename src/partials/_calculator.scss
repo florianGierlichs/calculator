@@ -13,16 +13,30 @@
   text-align: end;
 }
 
-.calculator__input {
+.calculator__inputs {
   flex-basis: calc(100% / 4);
   font-size: 3rem;
   background-color: aquamarine;
 }
 
+.calculator__inputs:hover {
+  background-color: fuchsia;
+}
+
 .calculator__input__spec {
   background-color: chartreuse;
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
 }
 
 .calculator__input__result {
+  background-color: tomato;
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
+}
+
+.clear {
+  flex-basis: calc(100% / 4);
+  font-size: 3rem;
   background-color: tomato;
 }
