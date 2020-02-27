@@ -39,12 +39,6 @@ const operatorEventListener = operatorClicked => {
 };
 
 calculatorOperators.forEach(operatorEventListener);
-//
-// function handleResultClick() {
-//   numberTwo = Number(calculatorOutput.value);
-//   calculatorOutput.value = addition(numberOne, numberTwo);
-// }
-// calculatorResult.addEventListener("click", handleResultClick);
 
 function handleResultClick() {
   numberTwo = Number(calculatorOutput.value);
