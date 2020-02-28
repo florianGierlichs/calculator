@@ -60,6 +60,11 @@ h1 {
   justify-content: space-evenly;
 }
 
+// .calculator.active {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
 .clear {
   margin: 7px;
   flex-basis: 20%;
@@ -68,6 +73,16 @@ h1 {
   box-shadow: 0 0 20px deeppink;
   border-radius: 20px;
   outline: none;
+  left: -500px;
+  bottom: -500px;
+  position: relative;
+  transition: all 3.5s ease-out;
+}
+
+.clear.active {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
 }
 
 .output__wrapper {

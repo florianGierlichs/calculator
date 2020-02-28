@@ -53,6 +53,8 @@ const magic = document.querySelector(".magicBtn");
 
 const doTheMagic = () => {
   document.querySelector(".calculator__wrapper").classList.toggle("active");
+  document.querySelector(".clear").classList.toggle("active");
+  document.querySelector(".calculator").classList.toggle("active");
 };
 
 magic.addEventListener("click", doTheMagic);
