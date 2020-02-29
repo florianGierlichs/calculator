@@ -48,3 +48,11 @@ function handleResultClick() {
   addElement(calculatorOutput.value);
 }
 calculatorResult.addEventListener("click", handleResultClick);
+
+const magic = document.querySelector(".magicBtn");
+
+const doTheMagic = () => {
+  document.querySelector(".calculator__wrapper").classList.toggle("active");
+};
+
+magic.addEventListener("click", doTheMagic);
