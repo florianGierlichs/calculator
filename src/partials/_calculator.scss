@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom right, rgb(58, 6, 58), rgb(12, 0, 12));
+  overflow: hidden;
 }
 
 h1 {
@@ -43,12 +44,16 @@ h1 {
   padding: 12px;
   top: -900px;
   position: relative;
-  transition: all 1.7s ease-out;
+  transition: all 2s ease-in-out;
 }
 
-.calculator__wrapper.active {
-  top: 0px;
+.calcActive {
+  top: 0;
 }
+
+// .calculator__wrapper.active {
+//   top: 0px;
+// }
 
 .calculator {
   height: 500px;
@@ -66,8 +71,6 @@ h1 {
 // }
 
 .clear {
-  margin: 7px;
-  flex-basis: 20%;
   font-size: 3rem;
   background-color: #ffe62e;
   box-shadow: 0 0 20px deeppink;
@@ -76,13 +79,20 @@ h1 {
   left: -500px;
   bottom: -500px;
   position: relative;
-  transition: all 3.5s ease-out;
+  transition: all 5s ease-in-out;
+  width: 100%;
+  height: 100%;
 }
 
-.clear.active {
-  position: relative;
-  left: 0px;
-  bottom: 0px;
+// .clear.active {
+//   left: 0px;
+//   bottom: 0px;
+// }
+
+.magic__wrapper {
+  margin: 7px;
+  flex-basis: 20%;
+  font-size: 3rem;
 }
 
 .output__wrapper {
@@ -104,14 +114,22 @@ h1 {
 }
 
 .calculator__inputs {
-  flex-basis: 20%;
-  margin: 7px;
-  font-size: 3rem;
   background-color: deeppink;
   box-shadow: 0 0 20px deeppink;
   border-radius: 20px;
   outline: none;
+  position: relative;
+  transition: all 5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
 }
+
+// .calculator__inputs.active {
+//   position: relative;
+//   left: 0px;
+//   bottom: 0px;
+// }
 
 .calculator__inputs:hover {
   background-color: fuchsia;
@@ -135,26 +153,52 @@ h1 {
 }
 
 .calculator__input__spec {
-  margin: 7px;
   background-color: #ffe62e;
   box-shadow: 0 0 20px deeppink;
-  flex-basis: 20%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  width: 100%;
+  height: 100%;
   font-size: 3rem;
   border-radius: 20px;
   outline: none;
 }
 
+// .calculator__inputs__spec.active {
+//   position: relative;
+//   left: 0px;
+//   bottom: 0px;
+// }
+
 .calculator__input__result {
+  font-size: 3rem;
   background-color: #ffe62e;
   box-shadow: 0 0 20px deeppink;
-  flex-basis: 20%;
-  font-size: 3rem;
   border-radius: 20px;
-  margin: 7px;
   outline: none;
+  position: relative;
+  transition: all 5s ease-in-out;
+  top: -500px;
+  left: -500px;
+  width: 100%;
+  height: 100%;
 }
+
+// .calculator__input__result.active {
+//   position: relative;
+//   right: 0px;
+//   bottom: 0px;
+// }
 
 .calculation {
   font-size: 2rem;
   background-color: springgreen;
+}
+
+.active {
+  position: relative;
+  right: 0px !important;
+  left: 0px !important;
+  bottom: 0px !important;
+  top: 0px !important;
 }
