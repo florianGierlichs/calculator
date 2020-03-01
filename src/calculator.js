@@ -20,9 +20,6 @@ const randomizeShit = () => {
   const listSpec = document.querySelectorAll(".calculator__input__spec");
   const listTotal = [...listInputs, ...listSpec]; // new Array()
 
-  const equalSign = document.querySelector(".calculator__input__result");
-
-  equalSign.style.left;
 
   listTotal.forEach(item => {
     const randNum = Math.floor(Math.random() * (1000 - 700 + 1) + 700);
