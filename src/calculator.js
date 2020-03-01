@@ -107,6 +107,7 @@ const doTheMagic = () => {
 
   randomizeShit();
   return;
+};
 
 const doTheMagic = () => {
   document.querySelector(".calculator__wrapper").classList.toggle("active");
