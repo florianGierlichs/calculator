@@ -109,8 +109,4 @@ const doTheMagic = () => {
   return;
 };
 
-const doTheMagic = () => {
-  document.querySelector(".calculator__wrapper").classList.toggle("active");
-};
-
 magic.addEventListener("click", doTheMagic);
